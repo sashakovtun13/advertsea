@@ -32,7 +32,8 @@ body {
   color: #2B968F !important; }
 
 main .container {
-  background: rgba(0, 0, 0, 0.74); }
+  background: rgba(0, 0, 0, 0.74);
+  padding-bottom: 10px; }
 
 footer .container {
   background: rgba(0, 0, 0, 0.74); }
