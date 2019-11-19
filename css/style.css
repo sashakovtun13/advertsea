@@ -55,7 +55,7 @@ hr {
 h2 {
   font-family: Ubuntu;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 40px;
   line-height: 46px;
   color: #2B968F;
@@ -115,7 +115,7 @@ footer {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 23px;
   color: #FFFFFF; }
 
 .cases_value {
@@ -126,7 +126,11 @@ footer {
   line-height: 18px;
   color: #FFFFFF; }
 
+.cases_value li {
+  margin-top: 5px; }
+
 li {
+  margin-top: 5px;
   font-family: Ubuntu;
   font-style: normal;
   font-weight: normal;
