@@ -2,9 +2,9 @@
   $(function(){
 
 
-    $(".menu").on('click',function(){
-      $(this).find(".hambergerIcon").toggleClass("open");
-    });
+    $('.menu-icon').click(function() {
+      $(this).toggleClass('active');
+  })
 
 
 
