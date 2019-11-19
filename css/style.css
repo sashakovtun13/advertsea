@@ -38,6 +38,44 @@ main .container {
 footer .container {
   background: rgba(0, 0, 0, 0.74); }
 
+.menu {
+  transform: translate(0%, 0%); }
+  .menu:hover {
+    cursor: pointer; }
+
+.hambergerIcon {
+  height: 4px;
+  width: 50px;
+  border-radius: 50px;
+  background-color: black;
+  transition: all ease 0.5s; }
+  .hambergerIcon::before, .hambergerIcon::after {
+    content: "";
+    position: absolute;
+    height: inherit;
+    border-radius: inherit;
+    background-color: inherit;
+    margin: auto;
+    width: 50%;
+    transition: all ease 0.5s; }
+  .hambergerIcon::before {
+    top: -20px;
+    left: 0;
+    transform-origin: left; }
+  .hambergerIcon::after {
+    bottom: -20px;
+    right: 0;
+    transform-origin: right; }
+
+.open {
+  transform: translate(0%, 0%) rotate(135deg); }
+  .open::before {
+    top: 0;
+    transform: translateX(100%) rotate(-90deg); }
+  .open::after {
+    bottom: 0;
+    transform: translateX(-100%) rotate(-90deg); }
+
 h1 {
   font-family: Merriweather;
   font-style: normal;
@@ -139,6 +177,12 @@ li {
   line-height: 18px;
   color: #FFFFFF; }
 
+@media screen and (max-width: 770px) {
+  .foo_text {
+    margin: 0 0 30px 0; }
+
+  .foo_soc {
+    margin: 0 0 0 0; } }
 @media screen and (max-width: 480px) {
   .container {
     width: 95%; }
@@ -166,7 +210,10 @@ li {
 
   .no-gutter > [class*='col-'] {
     padding: 0 10px 0 10px;
-    margin-top: 0px; } }
+    margin-top: 0px; }
+
+  .navbar {
+    padding: 0; } }
 @media screen and (max-width: 320px) {
   h1 {
     font-size: 40px; }

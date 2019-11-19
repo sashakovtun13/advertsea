@@ -45,6 +45,57 @@ footer .container{
 //------------------------------------------------------------------------------------------------------------
 //MAIN
 
+.menu{
+
+    transform: translate(0%,0%);
+    &:hover{
+      cursor:pointer;
+    }
+  }
+  .hambergerIcon{
+    height: 4px;
+    width:50px;
+    border-radius: 50px;
+    background-color: black;
+    
+    transition: all ease 0.5s;
+    &::before,&::after{
+      content:"";
+      position: absolute;
+      height: inherit;
+      border-radius: inherit;
+      background-color: inherit;
+      margin: auto;
+      width: 50%;
+      transition: all ease 0.5s;
+    }
+    &::before{
+      top: -20px;
+      left: 0;
+      transform-origin: left;
+    }
+    &::after{
+      bottom:-20px;
+      right: 0;
+      transform-origin: right;
+    }
+  }
+  
+  .open{
+    transform:translate(0%,0%) rotate(135deg);
+    &::before{
+      top:0;
+      transform: translateX(100%) rotate(-90deg);
+    }
+    &::after{
+      bottom:0;
+      transform: translateX(-100%) rotate(-90deg);
+    }
+  }
+
+
+
+
 h1{
     font-family: Merriweather;
     font-style: normal;
@@ -162,7 +213,17 @@ li{
 
 //Адаптивка
 
-
+@media screen and (max-width: 770px){
+    .foo_text{
+        margin: 0 0 30px 0;
+        
+        
+    }
+    .foo_soc{
+        margin: 0 0 0 0;
+        
+    }    
+}
 @media screen and (max-width: 480px) {
     .container{
         width: 95%;
@@ -198,8 +259,12 @@ li{
         margin-top: 0px;
 
     }
+    .navbar {
+        padding: 0;
+    }
 
 }
+
 @media screen and (max-width: 320px){
     h1{
         font-size: 40px;
